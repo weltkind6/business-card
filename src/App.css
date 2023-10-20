@@ -1,38 +1,175 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background: url('img/pc-bg.jpg') no-repeat left 165px;
+    margin: 0;
+    padding: 0;
+}
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+}
+.content {
+    width:350px;
+    max-width:100%;
+}
+.photo img,
+.logo img,
+.qrImg {
+    width:100%;
+    height: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+    padding-top: 40px;
+    margin-bottom: 120px;
+}
+.photo img {
+    border-radius: 5px;
+}
+.btn {
+    background: #0077FF;
+    border-radius: 5px;
+    width:100%;
+    margin-top:20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.btn img,
+.btnLink img {
+    margin-right:15px;
+}
+.fio {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.postBig {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 8px;
+}
+.postSmall {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 50px;
+}
+.contacts,
+.social  {
+    margin-bottom: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contacts a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    transition: .5s;
+}
+.contacts a img,
+.social a img {
+    margin-right:15px;
+}
+.phone,
+.ws {
+    margin-bottom:20px;
+}
+.social a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000000;
+    display: flex;
+    text-decoration: none;
+    transition: .5s;
+}
+.btnLink {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    color: #0077FF;
+    transition: .5s;
+    margin-bottom: 50px;
+}
+.qrWrapper {
+    margin-bottom: 50px;
+}
+.banner {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    background: #EAEAEA;
+    border-radius: 5px;
+    padding:60px;
+    margin-bottom: 15px;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+footer  {
+    margin-top:40px;
+}
+footer img {
+    margin-bottom: 15px;
+}
+.copyright  {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+    color: #000000;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer  a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #0077FF;
+    text-decoration: none;
 }
