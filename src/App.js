@@ -1,6 +1,5 @@
 import './App.css';
 import logoBig from './img/logo-big.png'
-import photo from './img/foto.png'
 import call from './img/icon/call.svg'
 import plus from './img/icon/plus.svg'
 import sms from './img/icon/sms.svg'
@@ -12,7 +11,6 @@ import qr from './img/qr.jpg'
 import {useEffect, useState} from "react";
 import axios from "axios";
 import WhatsAppLinkGenerator from "./WhatsAppLinkGenerator/WhatsAppLinkGenerator";
-import TelegramLink from "./TgLinkGenerator/TgLinkGenerator";
 import TgLinkGenerator from "./TgLinkGenerator/TgLinkGenerator";
 
 function App() {
