@@ -63,6 +63,9 @@ body {
     color: #000000;
     margin-bottom: 15px;
 }
+.fio > span:last-child {
+    margin-left: 10px;
+}
 .postBig {
     font-family: 'Roboto';
     font-style: normal;

@@ -11,16 +11,19 @@ import plusB from './img/icon/plus-b.svg'
 import qr from './img/qr.jpg'
 import {useEffect, useState} from "react";
 import axios from "axios";
+import WhatsAppLinkGenerator from "./WhatsAppLinkGenerator/WhatsAppLinkGenerator";
 
 function App() {
-    const [state, setState] = useState([])
-    console.log(state)
+    const [data, setData] = useState([])
+    const userData = data[0]
+    console.log('userData', userData)
+    console.log('data', data)
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('https://bc.okonti.ru/api/bc/?format=json&search=454F4564')
-                setState(response.data)
+                setData(response.data)
             }
             catch (error) {
                 console.log(error)
@@ -49,17 +52,18 @@ function App() {
                     <div className="contentWrapper">
                         <div className="content">
                             <div className="foto">
-                                <img src={photo} alt="foto"/>
+                                <img src={data[0].file_foto} alt="foto"/>
                             </div>
                             <div className="btn">
                                 <img src={plus} alt="plus"/>
                                 Добавить в контакты
                             </div>
                             <div className="fio">
-                                Дмитрий Кукуйский
+                                <span>{data[0].name}</span>
+                                <span>{data[0].surname}</span>
                             </div>
-                            <div className="postBig">Директор по маркетингу</div>
-                            <div className="postSmall">Отдел маркетинга и рекламы</div>
+                            <div className="postBig">{data[0].postbig}</div>
+                            <div className="postSmall">{data[0].postsmall}</div>
 
                             <div className="contacts">
                                 <a className="phone" href="tel:+7 (910) 657-73-28">
@@ -72,10 +76,14 @@ function App() {
                             </div>
 
                             <div className="social">
-                                <a className="ws" href="tel:+7 (910) 657-73-28"><img src={whatsapp} alt="whatsapp"/>Написать
-                                    в
-                                    WhatsApp</a>
-                                <a className="tg" href="mailto:marketing@mail.ru"><img src={telegram} alt="telegram"/>Написать
+                                <a className="ws" >
+                                    <img src={whatsapp} alt="whatsapp"/>
+                                    <WhatsAppLinkGenerator
+                                        phoneNumber="79163357802"
+                                        message="Написать в WhatsApp"
+                                    />
+                                </a>
+                                <a className="tg" href="tg"><img src={telegram} alt="telegram"/>Написать
                                     в Telegram </a>
                             </div>
 
