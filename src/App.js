@@ -9,8 +9,27 @@ import telegram from './img/icon/telegram.svg'
 import vk from './img/icon/vk.svg'
 import plusB from './img/icon/plus-b.svg'
 import qr from './img/qr.jpg'
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 function App() {
+    const [state, setState] = useState([])
+    console.log(state)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('https://bc.okonti.ru/api/bc/?format=json&search=454F4564')
+                setState(response.data)
+            }
+            catch (error) {
+                console.log(error)
+            }
+        }
+
+        fetchData().catch(error => console.log(error))
+    },[])
+
     return (
         <div className="App">
             <body>
