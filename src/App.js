@@ -12,10 +12,12 @@ import qr from './img/qr.jpg'
 import {useEffect, useState} from "react";
 import axios from "axios";
 import WhatsAppLinkGenerator from "./WhatsAppLinkGenerator/WhatsAppLinkGenerator";
+import TelegramLink from "./TgLinkGenerator/TgLinkGenerator";
+import TgLinkGenerator from "./TgLinkGenerator/TgLinkGenerator";
 
 function App() {
     const [data, setData] = useState([])
-    const userData = data[0]
+    const userData = [...data]
     console.log('userData', userData)
     console.log('data', data)
 
@@ -24,14 +26,13 @@ function App() {
             try {
                 const response = await axios.get('https://bc.okonti.ru/api/bc/?format=json&search=454F4564')
                 setData(response.data)
-            }
-            catch (error) {
+            } catch (error) {
                 console.log(error)
             }
         }
 
         fetchData().catch(error => console.log(error))
-    },[])
+    }, [])
 
     return (
         <div className="App">
@@ -50,41 +51,58 @@ function App() {
             <section>
                 <div className="contentWrapper">
                     <div className="contentWrapper">
-                        <div className="content">
-                            <div className="foto">
-                                <img src={data[0].file_foto} alt="foto"/>
+                        {data.map(({
+                                       file_foto,
+                                       name,
+                                       surname,
+                                       postbig,
+                                       postsmall,
+                                       whats_app_phone,
+                                       tg,
+                                       mail,
+
+                                   }) => <div className="content">
+                            <div className="photo">
+                                <img src={file_foto} alt="foto"/>
                             </div>
                             <div className="btn">
                                 <img src={plus} alt="plus"/>
                                 Добавить в контакты
                             </div>
                             <div className="fio">
-                                <span>{data[0].name}</span>
-                                <span>{data[0].surname}</span>
+                                <span>{name}</span>
+                                <span>{surname}</span>
                             </div>
-                            <div className="postBig">{data[0].postbig}</div>
-                            <div className="postSmall">{data[0].postsmall}</div>
+                            <div className="postBig">{postbig}</div>
+                            <div className="postSmall">{postsmall}</div>
 
                             <div className="contacts">
                                 <a className="phone" href="tel:+7 (910) 657-73-28">
                                     <img src={call} alt="call"/>
                                     +7
                                     (910)
-                                    657-73-28 </a>
-                                <a className="mail" href="mailto:marketing@mail.ru"><img
-                                    src={sms} alt="sms"/> marketing@mail.ru </a>
+                                    657-73-28
+                                </a>
+                                <a className="mail" href={`mailto:${mail}`}>
+                                    <img src={sms} alt="sms"/>{mail}
+                                </a>
                             </div>
 
                             <div className="social">
-                                <a className="ws" >
+                                <a className="ws">
                                     <img src={whatsapp} alt="whatsapp"/>
                                     <WhatsAppLinkGenerator
-                                        phoneNumber="79163357802"
+                                        phoneNumber={whats_app_phone}
                                         message="Написать в WhatsApp"
                                     />
                                 </a>
-                                <a className="tg" href="tg"><img src={telegram} alt="telegram"/>Написать
-                                    в Telegram </a>
+                                <a className="tg">
+                                    <img src={telegram} alt="telegram"/>
+                                    <TgLinkGenerator
+                                        username={tg}
+                                        message="Написать в Telegram"
+                                    />
+                                </a>
                             </div>
 
                             <div className="social">
@@ -105,7 +123,8 @@ function App() {
                             <div className="banner">
                                 Рекламный баннер
                             </div>
-                        </div>
+                        </div>)}
+
                     </div>
                 </div>
             </section>
