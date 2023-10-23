@@ -32,7 +32,6 @@ const Main = () => {
 
     return (
         <div className="App">
-            <MyForm />
             <section>
                 <div className="contentWrapper">
                     <div className="content">
@@ -58,6 +57,16 @@ const Main = () => {
                                        phone,
 
                                    }) => <div className="content" key={(Math.random() * 100)}>
+                            <MyForm
+                                name={name}
+                                surname={surname}
+                                postbig={postbig}
+                                postsmall={postsmall}
+                                whatsApp={whats_app_phone}
+                                tg={tg}
+                                mail={mail}
+                                phone={phone}
+                            />
                             <div className="photo">
                                 <img src={file_foto} alt="foto"/>
                             </div>
