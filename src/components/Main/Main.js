@@ -64,7 +64,6 @@ const Main = () => {
                                 postsmall={postsmall}
                                 whatsApp={whats_app_phone}
                                 tg={tg}
-                                mail={mail}
                                 phone={phone}
                             />
                             <div className="photo">

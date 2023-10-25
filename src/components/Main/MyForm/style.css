@@ -100,12 +100,12 @@ form .formRow .textarea{
 .textarea textarea:valid ~ .underline:before{
     transform: scale(1);
 }
-.submitBtn .input-data{
+.submitBtn .inputData{
     overflow: hidden;
     height: 45px!important;
     width: 25%!important;
 }
-.submitBtn .input-data .inner{
+.submitBtn .inputData .inner{
     height: 100%;
     width: 300%;
     position: absolute;
@@ -122,7 +122,7 @@ form .formRow .textarea{
     color: #fff;
     font-size: 17px;
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 1px;
     cursor: pointer;
     position: relative;
@@ -138,7 +138,7 @@ form .formRow .textarea{
     .container form .formRow{
         display: block;
     }
-    form .formRow .input-data{
+    form .formRow .inputData{
         margin: 35px 0!important;
     }
     .submitBtn .inputData{

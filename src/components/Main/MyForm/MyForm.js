@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './style.css';
 import {Controller, useForm} from "react-hook-form";
+import axios from "axios";
 
 const MyForm = ({name, surname, postsmall, postbig, tg, mail, phone, whatsApp}) => {
     const {register, handleSubmit, control, formState: { errors } } = useForm();
@@ -9,16 +10,37 @@ const MyForm = ({name, surname, postsmall, postbig, tg, mail, phone, whatsApp}) 
     const [inputPostsmall, setInputPostsmall] = useState(postsmall);
     const [inputPostBig, setInputPostBig] = useState(postbig);
     const [inputTg, setInputTg] = useState(tg);
-    const [inputMail, setInputMail] = useState(mail);
     const [inputPhone, setInputPhone] = useState(phone);
     const [inputWhatsApp, setInputWhatsApp] = useState(whatsApp);
+    const [submitData, setSubmitData] = useState([])
+    console.log('submitData', submitData)
+
+    const submitHandler = () => {
+      axios.put('https://bc.okonti.ru/api/bc/1/', {
+          "file_foto": null,
+          "surname": "",
+          "name": "Bolodya",
+          "postbig": "",
+          "postsmall": "",
+          "phone": "",
+          "whats_app_phone": "",
+          "mail": "",
+          "tg": "",
+          "bc_hash": "",
+          "bc_hash_edit": ""
+      })
+          .then(response => console.log(response.data))
+          .catch(error => console.log(error))
+    }
 
     return (
         <div className="container">
             <div className="text">
                 Редактировать
             </div>
-            <form action="src/components/Main/MyForm#" onSubmit={handleSubmit((data) => console.log(data))}>
+            <form
+                action="src/components/Main/MyForm#"
+                onSubmit={handleSubmit((data) => setSubmitData(data))}>
 
                 <div className="formRow">
                     <div className="inputData">
@@ -109,7 +131,12 @@ const MyForm = ({name, surname, postsmall, postbig, tg, mail, phone, whatsApp}) 
                         <label htmlFor="">Telegram</label>
                     </div>
                 </div>
-                <input type="submit" />
+                <div className="formRow submitBtn">
+                    <div className="inputData">
+                        <div className="inner" />
+                        <input type="submit" value="отправить"/>
+                    </div>
+                </div>
             </form>
         </div>
     );
