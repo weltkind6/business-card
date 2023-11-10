@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className={styles.wrapper}>
             <img className="logoImg" src={logoBig} alt="logo"/>
-            <div>Окна, двери, балконы. Быстро и на века</div>
+            <div />
             <a href="https://www.okonti.ru/">www.okonti.ru</a>
         </div>
     );
