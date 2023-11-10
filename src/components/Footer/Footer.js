@@ -7,7 +7,7 @@ const Footer = () => {
         <div className={styles.wrapper}>
             <img className="logoImg" src={logoBig} alt="logo"/>
             <div />
-            <a href="https://www.okonti.ru/">www.okonti.ru</a>
+            <a href="#">www.okonti.ru</a>
         </div>
     );
 };
