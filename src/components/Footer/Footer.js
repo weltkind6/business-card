@@ -1,0 +1,15 @@
+import React from 'react';
+import styles from './Footer.module.css';
+import logoBig from "../../img/logo-big.png";
+
+const Footer = () => {
+    return (
+        <div className={styles.wrapper}>
+            <img className="logoImg" src={logoBig} alt="logo"/>
+            <div>Окна, двери, балконы. Быстро и на века</div>
+            <a href="https://www.okonti.ru/">www.okonti.ru</a>
+        </div>
+    );
+};
+
+export default Footer;

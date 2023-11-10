@@ -13,14 +13,16 @@ import vk from "../../img/icon/vk.svg";
 import plusB from "../../img/icon/plus-b.svg";
 import qr from "../../img/qr.jpg";
 import './style.css';
+import Footer from "../Footer/Footer";
 
+const apiUrl = 'https://bc.okonti.ru/api/bc/?format=json&search=454F4564';
 const Main = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://bc.okonti.ru/api/bc/?format=json&search=454F4564')
+                const response = await axios.get(apiUrl)
                 setData(response.data)
             } catch (error) {
                 console.log(error)
@@ -57,15 +59,15 @@ const Main = () => {
                                        phone,
 
                                    }) => <div className="content" key={(Math.random() * 100)}>
-                            <MyForm
-                                name={name}
-                                surname={surname}
-                                postbig={postbig}
-                                postsmall={postsmall}
-                                whatsApp={whats_app_phone}
-                                tg={tg}
-                                phone={phone}
-                            />
+                            {/*<MyForm*/}
+                            {/*    name={name}*/}
+                            {/*    surname={surname}*/}
+                            {/*    postbig={postbig}*/}
+                            {/*    postsmall={postsmall}*/}
+                            {/*    whatsApp={whats_app_phone}*/}
+                            {/*    tg={tg}*/}
+                            {/*    phone={phone}*/}
+                            {/*/>*/}
                             <div className="photo">
                                 <img src={file_foto} alt="foto"/>
                             </div>
@@ -117,18 +119,8 @@ const Main = () => {
                                 <a className="btnLink"><img src={plusB} alt="plus-b"/> Добавить в контакты</a>
                                 <img className="qrImg" src={qr} alt="qr-code"/>
                             </div>
-
-                            <div className="banner">
-                                Рекламный баннер
-                            </div>
-                            <div className="banner">
-                                Рекламный баннер
-                            </div>
-                            <div className="banner">
-                                Рекламный баннер
-                            </div>
                         </div>)}
-
+                        <Footer />
                     </div>
                 </div>
             </section>
