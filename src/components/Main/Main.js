@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import MyForm from "./MyForm/MyForm";
 import WhatsAppLinkGenerator from "../../WhatsAppLinkGenerator/WhatsAppLinkGenerator";
 import TgLinkGenerator from "../../TgLinkGenerator/TgLinkGenerator";
 import axios from "axios";
@@ -18,6 +17,7 @@ import Footer from "../Footer/Footer";
 const apiUrl = 'https://bc.okonti.ru/api/bc/?format=json&search=454F4564';
 const Main = () => {
     const [data, setData] = useState([])
+    console.log('data', data)
 
     useEffect(() => {
         const fetchData = async () => {
