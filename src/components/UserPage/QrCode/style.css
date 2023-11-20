@@ -4,9 +4,11 @@
     font-size: 18px;
     line-height: 20px;
     display: flex;
+    align-items: center;
     color: #0077FF;
     transition: .5s;
     margin-bottom: 50px;
+
 }
 .qrWrapper {
     margin-bottom: 50px;
