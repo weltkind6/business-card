@@ -14,10 +14,9 @@ import qr from "../../img/qr.jpg";
 import './style.css';
 import Footer from "../Footer/Footer";
 
-const apiUrl = 'https://bc.okonti.ru/api/bc/?format=json&search=454F4564';
+const apiUrl = 'https://bc.okonti.ru/api/contact/51af2ec6eda06b22e7b3/';
 const Main = () => {
     const [data, setData] = useState([])
-    console.log('data', data)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -47,50 +46,30 @@ const Main = () => {
             <section>
                 <div className="contentWrapper">
                     <div className="contentWrapper">
-                        {data.map(({
-                                       file_foto,
-                                       name,
-                                       surname,
-                                       postbig,
-                                       postsmall,
-                                       whats_app_phone,
-                                       tg,
-                                       mail,
-                                       phone,
-
-                                   }) => <div className="content" key={(Math.random() * 100)}>
-                            {/*<MyForm*/}
-                            {/*    name={name}*/}
-                            {/*    surname={surname}*/}
-                            {/*    postbig={postbig}*/}
-                            {/*    postsmall={postsmall}*/}
-                            {/*    whatsApp={whats_app_phone}*/}
-                            {/*    tg={tg}*/}
-                            {/*    phone={phone}*/}
-                            {/*/>*/}
+                    <div className="content">
                             <div className="photo">
-                                <img src={file_foto} alt="foto"/>
+                                <img src={data.PHOTO} alt="foto"/>
                             </div>
                             <div className="btn">
                                 <img src={plus} alt="plus"/>
                                 Добавить в контакты
                             </div>
                             <div className="fio">
-                                <span>{name}</span>
-                                <span>{surname}</span>
+                                <span>{data.NAME}</span>
+                                <span>{data.LAST_NAME}</span>
                             </div>
-                            <div className="postBig">{postbig}</div>
-                            <div className="postSmall">{postsmall}</div>
+                            <div className="postBig">postbig</div>
+                            <div className="postSmall">postsmall</div>
 
                             <div className="contacts">
-                                <a className="phone" href={`tel:+${phone}`}>
+                                <a className="phone" href={`tel:+${123123123}`}>
                                     <img src={call} alt="call"/>
                                     +7
                                     (910)
                                     657-73-28
                                 </a>
-                                <a className="mail" href={`mailto:${mail}`}>
-                                    <img src={sms} alt="sms"/>{mail}
+                                <a className="mail" href={`mailto:'email test'}`}>
+                                    <img src={sms} alt="sms"/>{'test'}
                                 </a>
                             </div>
 
@@ -98,14 +77,14 @@ const Main = () => {
                                 <a className="ws">
                                     <img src={whatsapp} alt="whatsapp"/>
                                     <WhatsAppLinkGenerator
-                                        phoneNumber={whats_app_phone}
+                                        phoneNumber={'88005553535'}
                                         message="Написать в WhatsApp"
                                     />
                                 </a>
                                 <a className="tg">
                                     <img src={telegram} alt="telegram"/>
                                     <TgLinkGenerator
-                                        username={tg}
+                                        username={'88005553535'}
                                         message="Написать в Telegram"
                                     />
                                 </a>
