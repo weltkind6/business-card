@@ -14,14 +14,13 @@ import qr from "../../img/qr.jpg";
 import './style.css';
 import Footer from "../Footer/Footer";
 
-const apiUrl = 'https://bc.okonti.ru/api/contact/51af2ec6eda06b22e7b3/';
 const Main = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(apiUrl)
+                const response = await axios.get(getApiUrl())
                 setData(response.data)
             } catch (error) {
                 console.log(error)
@@ -30,6 +29,11 @@ const Main = () => {
 
         fetchData().catch(error => console.log(error))
     }, [])
+
+    const getApiUrl = () => {
+        const userValue = window.location.pathname.substring(1);
+        return `https://bc.okonti.ru/api/contact/${userValue}/`;
+    }
 
     return (
         <div className="App">
@@ -98,7 +102,7 @@ const Main = () => {
                                 <a className="btnLink"><img src={plusB} alt="plus-b"/> Добавить в контакты</a>
                                 <img className="qrImg" src={qr} alt="qr-code"/>
                             </div>
-                        </div>)}
+                        </div>
                         <Footer />
                     </div>
                 </div>
