@@ -1,4 +1,3 @@
-import './style.css';
 import UserPage from "../UserPage/UserPage";
 
 const Main = () => {
