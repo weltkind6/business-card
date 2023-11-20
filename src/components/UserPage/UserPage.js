@@ -16,7 +16,6 @@ import axios from "axios";
 
 const UserPage = () => {
     const [data, setData] = useState([])
-    console.log('data', data)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,7 +37,6 @@ const UserPage = () => {
 
     return (
         <div>
-            <h1>user</h1>
             <Routes>
                 <Route exact path="/show" element={<UserPage />} />
             </Routes>
