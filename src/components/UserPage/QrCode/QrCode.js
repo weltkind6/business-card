@@ -5,7 +5,6 @@ import './style.css';
 
 const QrCode = () => {
     const qrLink = `https://bc.okonti.ru/show/${getHash()}`;
-    console.log('qrValue', qrLink)
     const qrSize = 150;
 
     return (
