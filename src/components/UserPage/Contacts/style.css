@@ -1,0 +1,20 @@
+.contacts {
+    margin-bottom: 40px;
+}
+
+.contacts a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    transition: .5s;
+}
+.contacts a img {
+    margin-right:15px;
+}
+.phone {
+    margin-bottom:20px;
+}
