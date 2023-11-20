@@ -10,7 +10,7 @@ import telegram from "../../img/icon/telegram.svg";
 import TgLinkGenerator from "../../TgLinkGenerator/TgLinkGenerator";
 import vk from "../../img/icon/vk.svg";
 import plusB from "../../img/icon/plus-b.svg";
-import qr from "../../img/qr.jpg";
+import qr from "../../img/qr.png";
 import Footer from "../Footer/Footer";
 import axios from "axios";
 
@@ -65,8 +65,8 @@ const UserPage = () => {
                                 <span>{data.NAME}</span>
                                 <span>{data.LAST_NAME}</span>
                             </div>
-                            <div className="postBig">postbig</div>
-                            <div className="postSmall">postsmall</div>
+                            {/*<div className="postBig">postbig</div>*/}
+                            {/*<div className="postSmall">postsmall</div>*/}
 
                             <div className="contacts">
                                 <a className="phone" href={`tel:+${123123123}`}>
@@ -75,9 +75,9 @@ const UserPage = () => {
                                     (910)
                                     657-73-28
                                 </a>
-                                <a className="mail" href={`mailto:'email test'}`}>
-                                    <img src={sms} alt="sms"/>{'test'}
-                                </a>
+                                {/*<a className="mail" href={`mailto:'email test'}`}>*/}
+                                {/*    <img src={sms} alt="sms"/>{'test'}*/}
+                                {/*</a>*/}
                             </div>
 
                             <div className="social">
@@ -103,7 +103,11 @@ const UserPage = () => {
 
                             <div className="qrWrapper">
                                 <a className="btnLink"><img src={plusB} alt="plus-b"/> Добавить в контакты</a>
-                                <img className="qrImg" src={qr} alt="qr-code"/>
+                                <img
+                                    className="qrImg"
+                                    src={qr}
+                                    alt="qr-code"
+                                />
                             </div>
                         </div>
                         <Footer />
