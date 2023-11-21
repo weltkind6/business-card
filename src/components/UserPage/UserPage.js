@@ -10,15 +10,13 @@ import {getApiUrl} from "../../api/api";
 import Button from "../ui/Button/Button";
 import Fio from "./Fio/Fio";
 import Photo from "./Photo/Photo";
-import AppRoutes from "../../AppRoutes/AppRoutes";
 import Preloader from "../ui/Preloader/Preloader";
 import './style.css';
 
 const UserPage = () => {
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(false)
-    console.log('getApiUrl', getApiUrl())
-    // https://bc.okonti.ru/api/contact//
+    console.log('data', data)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -44,7 +42,7 @@ const UserPage = () => {
                         </div>
                         <Button>Добавить в контакты</Button>
                         <Fio name={data.NAME} lastName={data.LAST_NAME}/>
-                        <Contacts/>
+                        <Contacts phone={data.PHONE}/>
                         <SocialLinks/>
                         <QrCode qrImg={qr}/>
                     </div>
