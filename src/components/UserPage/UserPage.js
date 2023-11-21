@@ -17,6 +17,8 @@ import './style.css';
 const UserPage = () => {
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(false)
+    console.log('getApiUrl', getApiUrl())
+    // https://bc.okonti.ru/api/contact//
 
     useEffect(() => {
         const fetchData = async () => {
@@ -33,7 +35,6 @@ const UserPage = () => {
 
     return (
         <div>
-            <AppRoutes/>
             <Logo/>
             <div className="contentWrapper">
                 <div>

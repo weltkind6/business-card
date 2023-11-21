@@ -1,10 +1,11 @@
-import UserPage from "../UserPage/UserPage";
+import AppRoutes from "../../AppRoutes/AppRoutes";
+
 
 const Main = () => {
 
     return (
         <div>
-            <UserPage />
+            <AppRoutes/>
         </div>
     );
 };
