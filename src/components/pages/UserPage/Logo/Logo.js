@@ -1,4 +1,4 @@
-import logoBig from "../../../img/logo-big.png";
+import logoBig from "../../../../img/logo-big.png";
 import './styles.css';
 
 const Logo = () => {

@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import qr from "../../img/qr.png";
-import Footer from "../Footer/Footer";
+import qr from "../../../img/qr.png";
+import Footer from "../../Footer/Footer";
 import axios from "axios";
 import Logo from "./Logo/Logo";
 import QrCode from "./QrCode/QrCode";
 import SocialLinks from "./SocialLinks/SocialLinks";
 import Contacts from "./Contacts/Contacts";
-import {getApiUrl, getHash, vcardLink} from "../../api/api";
-import Button from "../ui/Button/Button";
+import {getApiUrl, getHash, vcardLink} from "../../../api/api";
+import Button from "../../ui/Button/Button";
 import Fio from "./Fio/Fio";
 import Photo from "./Photo/Photo";
-import Preloader from "../ui/Preloader/Preloader";
+import Preloader from "../../ui/Preloader/Preloader";
 import './style.css';
 
 const UserPage = () => {

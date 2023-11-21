@@ -1,6 +1,6 @@
-import call from "../../../img/icon/call.svg";
-import sms from "../../../img/icon/sms.svg"
-import {formatPhoneNumber} from "../../../helpers/helpers";
+import call from "../../../../img/icon/call.svg";
+import sms from "../../../../img/icon/sms.svg"
+import {formatPhoneNumber} from "../../../../helpers/helpers";
 import './style.css';
 
 const Contacts = ({ phone, email }) => {

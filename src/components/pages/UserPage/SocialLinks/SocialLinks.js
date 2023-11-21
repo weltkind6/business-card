@@ -1,9 +1,9 @@
 import React from 'react';
-import whatsapp from '../../../img/icon/whatsapp.svg';
-import telegram from '../../../img/icon/telegram.svg';
-import WhatsAppLinkGenerator from "../../../helpers/WhatsAppLinkGenerator/WhatsAppLinkGenerator";
-import TgLinkGenerator from "../../../helpers/TgLinkGenerator/TgLinkGenerator";
-import vk from "../../../img/icon/vk.svg";
+import whatsapp from '../../../../img/icon/whatsapp.svg';
+import telegram from '../../../../img/icon/telegram.svg';
+import WhatsAppLinkGenerator from "../../../../helpers/WhatsAppLinkGenerator/WhatsAppLinkGenerator";
+import TgLinkGenerator from "../../../../helpers/TgLinkGenerator/TgLinkGenerator";
+import vk from "../../../../img/icon/vk.svg";
 import './style.css';
 
 const SocialLinks = ({phone}) => {

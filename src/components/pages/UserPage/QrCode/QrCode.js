@@ -1,6 +1,6 @@
-import plusB from "../../../img/icon/plus-b.svg";
+import plusB from "../../../../img/icon/plus-b.svg";
 import QRCode from 'qrcode.react';
-import {getHash} from "../../../api/api";
+import {getHash} from "../../../../api/api";
 import './style.css';
 
 const QrCode = () => {
