@@ -12,7 +12,7 @@ const Contacts = ({ phone, email }) => {
                 {formatPhoneNumber(phone)}
             </a>
             <a className="mail" href={`mailto:'email test'}`}>
-                <img src={sms} alt="sms"/>{'test'}
+                <img src={sms} alt="sms"/>
             </a>
         </div>
     );

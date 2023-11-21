@@ -43,7 +43,7 @@ const UserPage = () => {
                         <Button>Добавить в контакты</Button>
                         <Fio name={data.NAME} lastName={data.LAST_NAME}/>
                         <Contacts phone={data.PHONE}/>
-                        <SocialLinks/>
+                        <SocialLinks phone={data.PHONE}/>
                         <QrCode qrImg={qr}/>
                     </div>
                     <Footer/>
