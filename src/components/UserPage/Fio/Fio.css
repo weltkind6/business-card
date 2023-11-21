@@ -1,11 +1,11 @@
 .fio {
     font-style: normal;
     font-weight: 700;
-    font-size: 35px;
+    font-size: 22px;
     line-height: 120%;
     color: #000000;
     margin-bottom: 15px;
 }
-.fio > span:last-child {
-    margin-left: 10px;
+.fio > span:nth-child(2n) {
+    margin: 0 5px;
 }

@@ -41,7 +41,11 @@ const UserPage = () => {
                             {isLoading ? <Photo photo={data.PHOTO}/> : <Preloader />  }
                         </div>
                         <Button>Добавить в контакты</Button>
-                        <Fio name={data.NAME} lastName={data.LAST_NAME}/>
+                        <Fio
+                            name={data.NAME}
+                            secondName={data.SECOND_NAME}
+                            lastName={data.LAST_NAME}
+                        />
                         <Contacts phone={data.PHONE}/>
                         <SocialLinks phone={data.PHONE}/>
                         <QrCode qrImg={qr}/>
