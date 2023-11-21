@@ -8,7 +8,7 @@
     color: #0077FF;
     transition: .5s;
     margin-bottom: 50px;
-
+    cursor: pointer;
 }
 
 .qrWrapper {

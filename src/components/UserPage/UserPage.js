@@ -6,7 +6,7 @@ import Logo from "./Logo/Logo";
 import QrCode from "./QrCode/QrCode";
 import SocialLinks from "./SocialLinks/SocialLinks";
 import Contacts from "./Contacts/Contacts";
-import {getApiUrl} from "../../api/api";
+import {getApiUrl, getHash, vcardLink} from "../../api/api";
 import Button from "../ui/Button/Button";
 import Fio from "./Fio/Fio";
 import Photo from "./Photo/Photo";
@@ -40,15 +40,17 @@ const UserPage = () => {
                         <div className="photoBlock">
                             {isLoading ? <Photo photo={data.PHOTO}/> : <Preloader />  }
                         </div>
-                        <Button>Добавить в контакты</Button>
+                        <Button link={`${vcardLink}${getHash()}`}>
+                            Добавить в контакты
+                        </Button>
                         <Fio
                             name={data.NAME}
                             secondName={data.SECOND_NAME}
                             lastName={data.LAST_NAME}
                         />
-                        <Contacts phone={data.PHONE}/>
+                        <Contacts phone={data.PHONE} />
                         <SocialLinks phone={data.PHONE}/>
-                        <QrCode qrImg={qr}/>
+                        <QrCode qrImg={qr} />
                     </div>
                     <Footer/>
                 </div>

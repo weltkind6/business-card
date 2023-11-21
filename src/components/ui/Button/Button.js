@@ -2,12 +2,12 @@ import './style.css';
 import plus from "../../../img/icon/plus.svg";
 import React from "react";
 
-const Button = ({children}) => {
+const Button = ({children, link}) => {
     return (
-        <div className="btn">
+        <a className="btn" href={link}>
             <img src={plus} alt="plus"/>
             {children}
-        </div>
+        </a>
     );
 };
 

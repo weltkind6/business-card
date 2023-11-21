@@ -9,8 +9,9 @@ const QrCode = () => {
 
     return (
         <div className="qrWrapper">
-            <a className="btnLink">
-                <img src={plusB} alt="plus-b"/> Добавить в контакты
+            <a className="btnLink" href={`https://bc.okonti.ru/vcard/${getHash()}`}>
+                <img src={plusB} alt="plus-b"/>
+                Добавить в контакты
             </a>
             <div className="qrContainer">
                 <QRCode value={qrLink} size={qrSize}/>

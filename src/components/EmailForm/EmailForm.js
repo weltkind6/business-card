@@ -27,7 +27,7 @@ const EmailForm = () => {
                     })}
                 />
                 {errors.email && <p>{errors.email.message}</p>}
-                <input type="submit" />
+                <input type="submit" value="Получить URL"/>
             </form>
         </div>
     );
