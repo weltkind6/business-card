@@ -17,11 +17,11 @@ const SocialLinks = ({phone}) => {
                 <img src={telegram} alt="telegram" />
                 <TgLinkGenerator username={phone} message="Написать в Telegram" />
             </a>
-            <div>
-                <a className="vk" href="#">
-                    <img src={vk} alt="vk"/>
-                </a>
-            </div>
+            {/*<div>*/}
+            {/*    <a className="vk" href="#">*/}
+            {/*        <img src={vk} alt="vk"/>*/}
+            {/*    </a>*/}
+            {/*</div>*/}
         </div>
     );
 };

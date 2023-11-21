@@ -10,8 +10,11 @@ const QrCode = () => {
     return (
         <div className="qrWrapper">
             <a className="btnLink">
-                <img src={plusB} alt="plus-b"/> Добавить в контакты</a>
-            <QRCode value={qrLink} size={qrSize} />
+                <img src={plusB} alt="plus-b"/> Добавить в контакты
+            </a>
+            <div className="qrContainer">
+                <QRCode value={qrLink} size={qrSize}/>
+            </div>
         </div>
     );
 };
