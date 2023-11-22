@@ -52,7 +52,10 @@ const UserPage = () => {
                             phone={data.PHONE}
                             email={data.EMAIL}
                         />
-                        <SocialLinks phone={data.PHONE}/>
+                        <SocialLinks
+                            phone={data.PHONE}
+                            telegram={data.TELEGRAM}
+                        />
                         <QrCode qrImg={qr} />
                     </div>
                     <Footer/>
