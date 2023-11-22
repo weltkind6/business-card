@@ -16,7 +16,6 @@ import './style.css';
 const UserPage = () => {
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(false)
-    console.log('data', data)
 
     useEffect(() => {
         const fetchData = async () => {
