@@ -2,19 +2,16 @@
     margin-bottom: 40px;
 }
 
-.social a img {
+.social div img {
     margin-right:15px;
 }
 
-.social a {
+.social div {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 120%;
-    color: #000000;
     display: flex;
-    text-decoration: none;
-    transition: .5s;
 }
 
 .ws {

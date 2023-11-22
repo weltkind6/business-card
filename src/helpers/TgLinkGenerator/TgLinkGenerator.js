@@ -7,7 +7,10 @@ const TgLinkGenerator = ({ username, message }) => {
     };
 
     return (
-        <a href={generateTelegramLink()} target="_blank" rel="noopener noreferrer">
+        <a
+            href={generateTelegramLink()}
+            target="_blank" rel="noopener noreferrer"
+        >
             Написать в Telegram
         </a>
     );
