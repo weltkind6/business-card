@@ -46,6 +46,7 @@ const UserPage = () => {
                             name={data.NAME}
                             secondName={data.SECOND_NAME}
                             lastName={data.LAST_NAME}
+                            post={data.POST}
                         />
                         <Contacts
                             phone={data.PHONE}

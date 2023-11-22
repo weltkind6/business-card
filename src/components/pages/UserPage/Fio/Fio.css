@@ -4,8 +4,13 @@
     font-size: 22px;
     line-height: 120%;
     color: #000000;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
 .fio > span:nth-child(2n) {
     margin: 0 5px;
+}
+
+.fio > div {
+    font-weight: 400;
+    margin-top: 20px;
 }
