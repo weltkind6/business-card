@@ -10,6 +10,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.App {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
 }

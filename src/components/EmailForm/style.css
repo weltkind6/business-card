@@ -68,6 +68,7 @@ input[type="submit"] {
 button[type="submit"]:hover,
 input[type="submit"]:hover {
     background: #135ee4;;
+    transition: ease-in-out .3s;
 }
 
 button[type="submit"]:active,
@@ -93,33 +94,3 @@ input[type="submit"] {
     -webkit-appearance: none;
 }
 
-.App {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-button[type="button"] {
-    display: block;
-    appearance: none;
-    background: #333;
-    color: white;
-    border: none;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 4px;
-}
-
-hr {
-    margin-top: 30px;
-}
-
-button {
-    display: block;
-    appearance: none;
-    margin-top: 40px;
-    border: 1px solid #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 4px;
-}
