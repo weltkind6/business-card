@@ -48,7 +48,10 @@ const UserPage = () => {
                             secondName={data.SECOND_NAME}
                             lastName={data.LAST_NAME}
                         />
-                        <Contacts phone={data.PHONE} />
+                        <Contacts
+                            phone={data.PHONE}
+                            email={data.EMAIL}
+                        />
                         <SocialLinks phone={data.PHONE}/>
                         <QrCode qrImg={qr} />
                     </div>

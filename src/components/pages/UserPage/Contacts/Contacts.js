@@ -11,9 +11,10 @@ const Contacts = ({ phone, email }) => {
                 <img src={call} alt="call"/>
                 {formatPhoneNumber(phone)}
             </a>
-            {/*<a className="mail" href={`mailto:'email test'}`}>*/}
-            {/*    <img src={sms} alt="sms"/>*/}
-            {/*</a>*/}
+            <a className="mail" href={`mailto: ${email}`}>
+                <img src={sms} alt="sms"/>
+                {email}
+            </a>
         </div>
     );
 };
