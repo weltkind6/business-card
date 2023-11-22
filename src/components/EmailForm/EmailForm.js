@@ -39,7 +39,7 @@ const EmailForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="mainForm">
             <label>{success ? <div>Email успешно отправлен!</div> : <div>Введите email</div>}</label>
             <input
                 {...register('email', {
