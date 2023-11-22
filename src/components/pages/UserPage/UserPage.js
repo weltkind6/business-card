@@ -40,7 +40,7 @@ const UserPage = () => {
                         <div className="photoBlock">
                             {isLoading ? <Photo photo={data.PHOTO}/> : <Preloader />  }
                         </div>
-                        <Button link={`${vcardLink}${getHash()}`}>
+                        <Button link={`${vcardLink}${getHash()}.vcf`}>
                             Добавить в контакты
                         </Button>
                         <Fio
