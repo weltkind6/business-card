@@ -6,7 +6,7 @@ import axios from "axios";
 
 const EmailForm = () => {
     const [email, setEmail] = useState('');
-    console.log('email', email)
+    const [success, setSuccess] = useState(false)
     const navigate = useNavigate()
 
     const testEmailUrl = `https://bc.okonti.ru/api/email-search/?email=${email}`
@@ -21,6 +21,7 @@ const EmailForm = () => {
         const fetchData = async () => {
             try {
                 await axios.get(testEmailUrl)
+                setSuccess(true)
             } catch (error) {
                 navigate("/404")
                 console.error('Error:', error);
@@ -39,7 +40,7 @@ const EmailForm = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <label>Введите email</label>
+            <label>{success ? <div>Email успешно отправлен!</div> : <div>Введите email</div>}</label>
             <input
                 {...register('email', {
                     required: 'Email обязателен',
