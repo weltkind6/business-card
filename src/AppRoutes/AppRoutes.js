@@ -7,9 +7,10 @@ import {useEffect} from "react";
 import axios from "axios";
 
 const AppRoutes = () => {
-    const hash = getHash()
     const location = useLocation();
     const navigate = useNavigate()
+
+    const hash = getHash()
 
     useEffect(() => {
         const fetchData = async () => {
