@@ -8,39 +8,38 @@ import axios from "axios";
 import TestPage from "../components/TestPage/TestPage";
 
 const AppRoutes = () => {
-    // const location = useLocation();
-    // const navigate = useNavigate()
-    //
-    // const hash = getHash()
-    //
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             await axios.get(getApiUrl())
-    //         } catch (error) {
-    //             navigate("/")
-    //             console.log(error)
-    //         }
-    //     }
-    //     fetchData().catch(error => console.log(error))
-    // }, [])
-    //
-    // if (location.pathname === "/show" && !hash) {
-    //     return <Navigate to="/" replace />;
-    // }
+    const location = useLocation();
+    const navigate = useNavigate()
+
+    const hash = getHash()
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                await axios.get(getApiUrl())
+            } catch (error) {
+                navigate("/")
+                console.log(error)
+            }
+        }
+        fetchData().catch(error => console.log(error))
+    }, [])
+
+    if (location.pathname === "/show" && !hash) {
+        return <Navigate to="/" replace />;
+    }
 
     return (
         <Routes>
-            <Route path="/test" element={<TestPage />}/>
-            {/*<Route exact path="/" element={<MainPage/>}/>*/}
-            {/*<Route*/}
-            {/*    exact*/}
-            {/*    path="/show/:hash"*/}
-            {/*    element={<UserPage />}*/}
-            {/*/>*/}
+            <Route exact path="/" element={<MainPage/>}/>
+            <Route
+                exact
+                path="/show/:hash"
+                element={<UserPage />}
+            />
 
-            {/*<Route exact path="/404" element={<NotFound/>}/>*/}
-            {/*<Route path="*" element={<Navigate to="/" replace />} />*/}
+            <Route exact path="/404" element={<NotFound/>}/>
+            <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
     );
 };
