@@ -7,14 +7,22 @@ const Contacts = ({ phone, email }) => {
 
     return (
         <div className="contacts">
-            <a className="phone" href={`tel:+${phone}`}>
-                <img src={call} alt="call"/>
-                {formatPhoneNumber(phone)}
-            </a>
-            <a className="mail" href={`mailto: ${email}`}>
-                <img src={sms} alt="sms"/>
-                {email}
-            </a>
+            {
+                phone && (
+                    <a className="phone" href={`tel:+${phone}`}>
+                        <img src={call} alt="call"/>
+                        {formatPhoneNumber(phone)}
+                    </a>
+                )
+            }
+            {
+                email && (
+                    <a className="mail" href={`mailto: ${email}`}>
+                        <img src={sms} alt="sms"/>
+                        {email}
+                    </a>
+                )
+            }
         </div>
     );
 };
