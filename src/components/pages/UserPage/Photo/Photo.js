@@ -5,7 +5,7 @@ const Photo = ({photo}) => {
     return (
         <div className="photo">
             <img
-                src={photo === null ? noAvatar : photo} alt="foto"
+                src={photo ? photo : noAvatar} alt="foto"
             />
         </div>
     );
