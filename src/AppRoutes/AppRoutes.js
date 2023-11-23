@@ -32,7 +32,6 @@ const AppRoutes = () => {
     return (
         <Routes>
             <Route exact path="/" element={<MainPage/>}/>
-            <Route exact path="/test" element={<TestPage/>}/>
             <Route
                 exact
                 path="/show/:hash"
