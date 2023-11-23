@@ -5,7 +5,6 @@ import {getApiUrl, getHash} from "../api/api";
 import NotFound from "../components/pages/NotFound/NotFound";
 import {useEffect} from "react";
 import axios from "axios";
-import TestPage from "../components/TestPage/TestPage";
 
 const AppRoutes = () => {
     const location = useLocation();
